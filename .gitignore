@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Flutter generated files
+mobile-source/.dart_tool/
+mobile-source/build/
+mobile-source/.flutter-plugins
+mobile-source/.flutter-plugins-dependencies
+mobile-source/android/.gradle/
+
+# Editors
+.vscode/
+.idea/

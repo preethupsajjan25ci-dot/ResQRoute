@@ -1,0 +1,24 @@
+
+name: resqroute_mobile
+description: ResQRoute educational mobile client for ambulance allocation and route planning.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.5.0
+  flutter_map: ^8.3.2
+  latlong2: ^0.9.1
+  flutter_secure_storage: ^10.3.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
