@@ -1,0 +1,30 @@
+name: Build and Deploy ResQRoute Web
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Build Flutter Web
+        working-directory: mobile-source
+        run: flutter build web --release --dart-define=API_BASE_URL=https://resqroute-api-h8rf.onrender.com
+
+      - name: Upload web build
+        uses: actions/upload-artifact@v4
+        with:
+          name: resqroute-web
+          path: mobile-source/build/web/
